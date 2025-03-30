@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="icon" href="images/RB_Logo.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<title>Resume_Builder</title>
+</head>
+
+<body>
+              <!-- NavBar -->
+		    <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light container-fluid NavBar"
+			id="nav" style="background-color: #696969; padding:0.01%;">
+			<div class="container">
+			    <a class="navbar-brand mx-auto" href="index.html">
+				<img src="images/RB.svg" alt="" height="50px">
+			    </a>
+			    <!--<div class="collapse navbar-collapse" id="nav-list">
+			    </div>-->
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#pageHeader">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="Form.html">Create Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#templates">Resume Templates</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="faq.html">FAQ</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		    </nav>
+	     <!-- NavBar End -->
+	      <div class="container">
+                           <div class="left-side">
+	      <p class='left-title'>Modern & Professional job-ready free resume templates</p>
+
+	      <p class='left-content'>Looking to land your dream job? Start with a polished, professional resume. Our Resume Builder is here to
+	       make the process    quick, easy, and hassle-free. Whether you're a recent graduate or a seasoned professional, creating a standout
+	       resume has never been easier.</p>
+	      <div class='resume-button-container'>
+		 <button type="button" class="resume-button"><a href="Form.html" style="text-decoration:none; color:white;">Create Your Resume</a>
+		 </button>
+	      </div>
+           </div>
+      <div class="right-side">
+       <div class="scroll-resume-list">
+           <div class='scroll-resume-list-left'>
+		<div class='scroll-resume' ><img class='scroll-resume-img' src='template1.jpg' onclick="selectTemplate('template1')"/></div>
+		<div class='scroll-resume'><img class='scroll-resume-img' src='template2.jpg' onclick="selectTemplate('template2')"/></div>
+		<div class='scroll-resume'><img class='scroll-resume-img' src='template3.jpg' onclick="selectTemplate('template3')"/></div>
+            </div>
+            <div class='scroll-resume-list-right'>
+		<div class='scroll-resume'><img class='scroll-resume-img' src='template4.jpeg' onclick="selectTemplate('template4')"/></div>
+		<div class='scroll-resume'><img class='scroll-resume-img' src='template5.jpeg' onclick="selectTemplate('template5')"/></div>
+		<div class='scroll-resume'><img class='scroll-resume-img' src='template6.jpeg' onclick="selectTemplate('template6')"/></div>
+	    </div>
+       </div>
+      </div>
+    </div>
+	<div class="container-fluid templates " id="templates">
+		<h1>Make a resume that stands out</h1>
+		<p>Increase your chances of getting a job by creating your resume with our well designed resume
+			templates.</p>
+		<div class="row" style="width:90%; margin:auto;">
+			<div class="col-md-4">
+				<img src="images/T1.PNG" style="width:510px; height:620px;" class="img-thumbnail" alt="...">
+			</div>
+			<div class="col-md-4">
+				<img src="images/T2.PNG" style="width:510px; height:620px;" class="img-thumbnail"
+					style="width:520px;height:620px;" alt="...">
+			</div>
+			<div class="col-md-4">
+				<img src="images/T3.PNG" style="width:510px; height:620px;" class="img-thumbnail" alt="...">
+			</div>
+		</div>
+	</div>
+        
+        
+       <!-- Features Section -->
+		<p class="features-title">Features</p>
+		<div class="container features">
+
+		    <!-- Feature 1 -->
+		    <div class="custom-card row feature mb-4">
+			<!-- Image Section -->
+			<div class="col-md-4 custom-bg-gray d-flex justify-content-center align-items-center">
+			    <img src="images/R1.png" class="img-fluid rounded" style="max-width: 60%; height: auto;">
+			</div>
+			
+			<!-- Content Section -->
+			<div class="custom-card col-md-8 d-flex justify-content-center align-items-center">
+			    <div class="card-body text-center">
+				<h5 class="card-title">Quick and easy resume builder</h5>
+				<p class="card-text">With our online CV maker, it is simple for anyone to quickly create a professional CV. Enter your personal details and begin filling out your CV content. Finally, choose one of our available CV layouts, and download your CV.</p>
+			    </div>
+			</div>
+		    </div>
+
+		    <!-- Feature 2 -->
+		    <div class="custom-card row feature mb-4">
+			<div class="col-md-4 custom-bg-gray d-flex justify-content-center align-items-center">
+			    <img src="images/R2.png" class="img-fluid rounded" style="max-width: 60%; height: auto;">
+			</div>
+			<div class="custom-card col-md-8 d-flex justify-content-center align-items-center">
+			    <div class="card-body text-center">
+				<h5 class="card-title">More likely to land a job</h5>
+				<p class="card-text">With a representative and professional CV, you will stand out amongst all other applicants. You are also up to 65% more likely to be invited to an interview.</p>
+			    </div>
+			</div>
+		    </div>
+		    
+		    <!-- Feature 3 -->
+		    <div class="custom-card row feature mb-4">
+			<div class="col-md-4 custom-bg-gray d-flex justify-content-center align-items-center">
+			    <img src="images/R3.png" class="img-fluid rounded" style="max-width: 60%; height: auto;">
+			</div>
+			<div class="custom-card col-md-8 d-flex justify-content-center align-items-center">
+			    <div class="card-body text-center">
+				<h5 class="card-title">Organize your applications</h5>
+				<p class="card-text">Often, it is important to be able to tailor your CV based on the job you wish to apply for. With CV maker, you can create and manage several different CVs in an organized way through your own personal account hub.</p>
+			    </div>
+			</div>
+		    </div>
+		</div>
+		
+         <!-- Features Section End-->
+
+	<div class="container-fluid page">
+		<div class="row">
+			<h2 class="page-title">Boost your chances of getting that job you've been dreaming of</h2>
+			<p class="page-title-para">With CV maker, you can quickly and easily create a distinctive and professional
+				CV within 15 minutes.
+			</p>
+		</div>
+		
+			<div class="button-container" style="margin:0rem 0rem 2.5rem 7rem; height:100%;">
+				<button type="button" class="resume-button1"><a href="Form.html" style="text-decoration:none; color:white;">Create Your Resume</a>
+				</button>
+			</div>
+	</div>
+</body>
+
+<script>
+
+    $(function () {
+		$("[rel='tooltip']").tooltip();
+	});
+	document.addEventListener("DOMContentLoaded", () => {
+    const leftSide = document.querySelector(".left-side");
+
+    window.addEventListener("scroll", () => {
+      const sectionTop = leftSide.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight * 0.9) {  // Trigger animation when section is 90% in view
+        leftSide.classList.add("active");
+      } else {
+        leftSide.classList.remove("active");  // Remove animation when out of view
+      }
+    });
+  });
+</script>
+
+</html>

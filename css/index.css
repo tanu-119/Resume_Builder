@@ -1,0 +1,446 @@
+html,
+body {
+  height: 100%;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: bold;
+  background-color: #a0a0a0;
+}
+
+/* .button {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 6px;
+  color: white;
+  background-color: #626ccc;
+  padding: 10px;
+  margin: 20px;
+  width: 180px;
+  height: 50px;
+  margin-bottom: 50px;
+} 
+
+button1 {
+  width: 300x;
+  height: 100px;
+}
+*/
+
+/* Header Styles */
+/* General Header Styles */
+.header {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 30px; /* Padding for top and bottom */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow for visual depth */
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
+}
+
+/* Container to align logo and nav */
+
+/* Logo section */
+.header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.header .logo img {
+  width: 40px; /* Logo size */
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Navbar styling */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+  color: white; /* Space between links */
+}
+
+.nav-link {
+  color: white; /*#333; /* Dark text color */
+  font-size: 25px;
+  text-decoration: none; /* Remove underline */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack logo and nav items vertically on smaller screens */
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically */
+    margin-top: 15px;
+  }
+
+  .nav-item {
+    margin: 10px 0; /* Adjust margin for vertical stacking */
+  }
+}
+
+.container {
+  display: flex;
+  /*padding-top:50px;
+  padding-right:400px;
+  /*margin-top: 50px;
+  margin-left:100px;
+  margin-right:100px;
+  background-color: #A0A0A0;
+  background-size:100% auto;
+    */
+  padding: 30px;
+}
+
+.left-side {
+  flex: 1;
+  padding-right: 100px;
+  padding-left: 60px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-100%); /* Start off-screen vertically */
+  animation: slideIn 2s forwards; /* Apply the vertical slide-in effect */
+}
+
+/* Add animation effect when visible */
+.left-side.active {
+  opacity: 1;
+  transform: translateY(0); /* Slide into view */
+}
+
+.left-title {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 35px;
+  margin-top: 150px;
+  background-size: 100% auto;
+  animation: slideIn 2s forwards ease-in-out infinite; /* Apply the vertical slide-in effect */
+}
+
+.left-content {
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 35px;
+  text-align: justify;
+  animation: slideIn 2s forwards ease-in-out infinite; /* Apply the vertical slide-in effect */
+}
+
+/* Keyframes for the slide-in effect (vertical) */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%); /* Start off the top of the screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at normal position */
+    opacity: 1;
+  }
+}
+
+.right-side {
+  flex: 1;
+  text-align: center;
+}
+
+.resume-button {
+  padding: 20px 30px;
+  background-color: #404040;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Add scale effect on hover */
+}
+
+.resume-button1 {
+  padding: 20px 30px;
+  background-color: #404040;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Add scale effect on hover */
+  margin-bottom: 50px;
+}
+
+.resume-button:hover {
+  background-color: rgb(20, 20, 20);
+  transform: scale(1.1); /* Expands the button by 10% */
+}
+
+.resume-button:active {
+  background-color: black;
+  transform: scale(1); /* Resets to original size when clicked */
+}
+
+/*
+.scroll-resume-list{
+   align-items: flex-start;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -48px;
+    transform: translateZ(0);
+   }
+   */
+/* Ensure the container has a fixed height and hides the overflowed content */
+.scroll-resume-list {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  height: 700px; /* Set the height of the scrollable area */
+  overflow: hidden; /* Hide content that overflows */
+  position: relative; /* To make sure the items stay inside the container */
+  margin-top: 40px;
+  /*gap: 20px;  Space between the columns */
+}
+
+/* Make the resume list scroll continuously from bottom to top */
+.scroll-resume-list-left,
+.scroll-resume-list-right {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  animation: scrollUp 20s linear infinite; /* Scroll animation (loop indefinitely) */
+  padding-bottom: 30px; /* Optional: space between last item and bottom */
+  padding-top: 35px;
+}
+
+/* Define the keyframes for the scrolling animation */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0); /* Start at the initial position */
+  }
+  100% {
+    transform: translateY(-100%); /* End at the top, making it scroll up */
+  }
+}
+
+/* Styles for each resume item */
+.scroll-resume {
+  width: 90%;
+  height: 100%; /* Make each resume item fill the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Ensure the images are visible */
+  transform: translateY(0); /* No initial translation */
+  animation: none; /* No need for individual animation */
+  margin-bottom: 20px; /* Space between the items */
+}
+
+/* Optional: Style for the images */
+.scroll-resume-img {
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gradient {
+  background-image: url("../images/img1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  /* background-transparent: 0.2; */
+  /*background:rgb(0,97,242);
+background:linear-gradient(135deg,rgba(0,97,242,1)0%,rgba(105,0,199,1)100%);*/
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+}
+.page-header {
+  margin-top: 3.5rem;
+  font-size: 40px;
+  color: #000000;
+}
+.page-header p {
+  margin-left: 50rem;
+  padding: 10rem 5rem 0rem 0rem;
+}
+.page-header button {
+  margin-left: 50rem;
+}
+li {
+  padding-left: 2.5rem;
+}
+.dev a {
+  text-decoration: none;
+  color: black;
+}
+.page.dev {
+  background: rgb(240, 240, 240);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 95%, 0 100%);
+}
+.dev .card {
+  width: 350px;
+  height: 500px;
+  box-shadow: 2px 2px 14px 3px #726c6c;
+  background-color: rgb(240, 240, 240);
+}
+.templates {
+  margin-bottom: 10rem;
+  background-size: cover;
+  height: auto;
+  width: auto;
+  padding-bottom: 7rem;
+  background: rgb(240, 240, 240);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+.templates h1 {
+  padding-top: 3.5rem;
+  text-align: center;
+}
+.templates p {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 18px;
+}
+.templates img {
+  padding: rem;
+  border: 0px;
+}
+
+.page {
+  margin-top: 2.5rem;
+  background: rgb(240, 240, 240);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+.page-title {
+  margin: 4rem 0rem 2.5rem 7rem;
+}
+.page-title-para {
+  margin: 0.5rem 0rem 2.5rem 7rem;
+}
+form {
+  margin-left: 10rem;
+  padding-left: 10rem;
+}
+.Form h1 {
+  margin: 5rem;
+  text-align: center;
+}
+.Form div {
+  margin-bottom: 2.5rem;
+}
+.Form button {
+  margin-top: 2rem;
+}
+footer {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/***************************Features Styles *****************************************/
+
+.features {
+  display: grid;
+  grid-template-rows: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive grid layout */
+  gap: 20px; /* Space between cards */
+  padding: 50px;
+}
+
+.features-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Slide-in effect for the features */
+.feature {
+  opacity: 0;
+  transform: translateX(-100%); /* Start from the left side */
+  animation: slideIn 2s forwards ease-in-out infinite; /* Apply the vertical slide-in effect */
+}
+
+.feature:nth-child(1) {
+  animation-delay: 0.2s; /* Delay for the first feature */
+}
+
+.feature:nth-child(2) {
+  animation-delay: 0.3s; /* Delay for the second feature */
+}
+
+.feature:nth-child(3) {
+  animation-delay: 0.4s; /* Delay for the third feature */
+}
+
+/* Keyframes for the slide-in effect */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Start off-screen */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+  }
+}
+
+/* Hover effect for the feature cards */
+.custom-card:hover {
+  transform: translateY(-10px); /* Lift the card up */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Styling for the cards */
+.custom-card {
+  background-color: #e8e8e8; /* Light grey background color */
+  border: none;
+  border-radius: 15px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Section */
+.custom-bg-gray {
+  background-color: #484848;
+  border-radius: 15px 0 0 15px; /* Rounded left corners for the image */
+  transition: background-color 0.3s ease;
+}
+
+.custom-card img {
+  border-radius: 15px 0 0 15px; /* Rounded corners for the image */
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover .custom-bg-gray {
+  background-color: #333333; /* Darken the background color on hover */
+}
+
+/* Content Section */
+.custom-card.col-md-8 {
+  border-radius: 0 15px 15px 0; /* Rounded right corners for the content */
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
