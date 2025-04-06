@@ -288,6 +288,9 @@ function generateCV(template) {
     }
   }
 
+  // <li><span class="text">English</span></li>
+
+  //  **********    Languages    **********
 
   let lang_items = $("#accordionLang .accordion-item").length;
   for (let i = 0; i < lang_items; i++) {
@@ -307,6 +310,25 @@ function generateCV(template) {
       $(".t3 .content-box .languages").append(`<p class="p3">${lang}</p>`);
     }
   }
+
+  //  **********    Archievements    **********
+
+  // let achv = $(`#achv_description`).val().trim();
+  //*let achv = $(`#achv_description`).val().replaceAll("\n", "<br />\r\n");
+
+  //if (achv !== "") {
+  // if (template == "Template_1") {
+  //  $(".t1 .right_side .achievements").append(`<p>${achv}</p>`);
+  // } else if (template == "Template_2") {
+  //  $(".t2 .lower_right .achievements .content .con").append(
+  //    `<div class="val">${achv}</div>`
+  //  );
+  //} else if (template == "Template_3") {
+  // }
+  //}
+  //  **********    **********    **********    **********    **********
+
+  // ******************* Profile *****************8**
 
   let profile = $(`#profile`).val().replaceAll("\n", "<br />\r\n");
   if (profile !== "") {
