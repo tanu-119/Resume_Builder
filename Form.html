@@ -26,6 +26,7 @@
     <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
     <link rel="stylesheet" href="css/form.css">
 
+
     <link rel="stylesheet" href="./templates/template1.css">
     <link rel="stylesheet" href="./templates/template2.css">
     <link rel="stylesheet" href="./templates/template3.css">
@@ -34,39 +35,38 @@
 </head>
 
 <body>
-      <!-- NavBar -->
-      <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light container-fluid NavBar"
-      id="nav" style="background-color: #696969; padding:0.01%;">
-      <div class="container">
-          <a class="navbar-brand mx-auto" href="index.html">
-          <img src="images/RB.svg" alt="" height="50px">
-          </a>
-          <!--<div class="collapse navbar-collapse" id="nav-list">
-          </div>-->
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="Form.html">Create Resume</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html#templates">Resume Templates</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="faq.html">FAQ</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-      </nav>
-   <!-- NavBar End -->
+       <!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top container-fluid NavBar" id="nav" style="background-color: #696969; padding:0.01%;">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/RB.svg" alt="" height="50px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Form.html">Create Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#templates">Resume Templates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- NavBar End -->
       
 
 
     <div class="container-fluid p-0">
-
         <!-- **********     FORM - 1    ********** -->
         <form id="form1" class="step step-1 active">
             <div class="container mt-5">
@@ -80,16 +80,18 @@
                 <hr style="width:95%; margin: 10px;" size="3" class="bg-secondary">
                 
                 <div class="d-flex flex-row">
-                    <!-- File input for uploading photo, optional -->
-                    <input type="file" accept="image/*" name="inpImg" id="inpImg">
-                
-                    <div class="imgContainer float-left m-4">
-                        <!-- Image preview -->
-                        <img src="" alt="Image Preview" id="image" style="display: none;">
-                        <!-- Text shown when no image is uploaded -->
-                        <span id="previewText"><span id="innerSpan"><i class="fas fa-upload me-2"></i>Upload photo</span></span>
-                    </div>
-                    <div class="row col-6 m-3" style="float:left;">
+                    
+                        <!-- File input for uploading photo, optional -->
+                        <input type="file" accept="image/*" name="inpImg" id="inpImg">
+                    
+                        <div class="imgContainer float-left m-4">
+                            <!-- Image preview -->
+                            <img src="" alt="Image Preview" id="image" style="display: none;">
+                            <!-- Text shown when no image is uploaded -->
+                            <span id="previewText"><span id="innerSpan"><i class="fas fa-upload me-2"></i>Upload photo</span></span>
+                        </div>
+
+                    <div class="row mx-5 mb-5 mt-4" style="float:left;">
                         <div class="col-12">
                             <label for="fname" class="form-label">First Name</label>
                             <input type="text" class="form-control" id="fname" required>
@@ -341,11 +343,7 @@
                                                                 id="job_title" placeholder="e.g. Web Devloper">
                                                         </div>
 
-                                                        <!-- <div class="col-md-6">
-                                                            <label for="work_city" class="form-label">City/Town</label>
-                                                            <input type="text" class="form-control work_city"
-                                                                id="work_city" placeholder="e.g. San francico">
-                                                        </div> -->
+                                                       
 
                                                         <div class="col-12 mt-3">
                                                             <label for="" class="form-label">Company Name</label>
@@ -503,7 +501,6 @@
                                                         placeholder="e.g. Reading, Writing"
                                                         onkeydown="adder(event,'hobby')">
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -646,6 +643,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <!-- template 4 -->
+                                <div class="card p-1" onclick="templateCheckboxSelector(this)">
+                                    <img src="template3.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="btn_box container d-block text-center">
+                                            <h5 class="card-title">English</h5>
+                                            <input class="form-check-input" type="checkbox" name="selected_templates" id="template_4" value="Template_4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -665,11 +674,6 @@
 
 
     <div class="t1 container-fluid template" style="background-color: aliceblue; display:none;" id="Template_1">
-        <!--<a onclick="backToForm('t1')">
-            <div class="back-to-form"><span><i class="fas fa-angle-double-left fa-3x"></i></span><span
-                    style="font-size: 23px; margin-left: 10px; margin-right: 10px;">Back to form</span>
-            </div>
-        </a>-->
         <div class="main">
             <div class="top-section" style="background-color: rgb(63, 91, 218);" >
                 <img src="../images/person.jfif" class="profilepic">
@@ -693,31 +697,17 @@
 
                     <p class=" head">My Skills</p>
                     <ul class="skills">
-                        <!-- <li><span>Web Devloper</span></li>
-                        <li><span>Graphic Designer</span></li>
-                        <li><span>Adobe Photoshop</span></li>
-                        <li><span>Adobe Illustrator</span></li>
-                        <li><span>Problem Solving</span></li> -->
                     </ul>
                     <br />
 
                     <div class="languages">
                         <p class="head">Languages</p>
-                        <!-- <p class="p3">Hindi</p>
-                        <p class="p3">English</p>
-                        <p class="p3">Gujarati</p>
-                        <p class="p3">German</p> -->
                     </div>
                     <br />
 
 
                     <p class="head">Interest</p>
                     <ul class="interest">
-                        <!-- <li><span>A</span></li>
-                        <li><span>B</span></li>
-                        <li><span>C</span></li>
-                        <li><span>D</span></li>
-                        <li><span>E</span></li> -->
                     </ul>
 
                 </div>
@@ -741,37 +731,11 @@
 
                     <p class="head">Experience</p>
                     <div class="experience">
-                        <!-- <p class="job-title">Web Devloper (2018-NOW)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p>
-
-                        <p class="job-title">Sotware Devloper (2012-2018)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p>
-
-                        <p class="job-title">Graphic Designer (2010-2012)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p> -->
                     </div>
                     <br />
 
                     <p class="head">Education</p>
                     <div class="education">
-                        <!-- <p class="degree">High School (2009-2010)</p>
-                        <p class="par-4">
-                            School Name
-                        </p>
-
-                        <p class="degree">B.TECH (2013-2015)</p>
-                        <p class="par-4">
-                            College Name
-                        </p> -->
                     </div>
                 </div>
             </div>
@@ -789,13 +753,7 @@
     <!-- **********     Template-2      ********** -->
 
   
-
     <div class="t2 container-fluid template" style="background-color: aliceblue; display:none;" id="Template_2">
-       <!-- <a onclick="backToForm('t2')">
-            <div class="back-to-form"><span><i class="fas fa-angle-double-left fa-3x"></i></span><span
-                    style="font-size: 23px; margin-left: 10px; margin-right: 10px;">Back to form</span>
-            </div>
-        </a>-->
         <div class="main">
             <div class="top-section" style="background-color: green;" >
                 <img src="../images/person.jfif" class="profilepic">
@@ -819,31 +777,16 @@
 
                     <p class=" head">My Skills</p>
                     <ul class="skills">
-                        <!-- <li><span>Web Devloper</span></li>
-                        <li><span>Graphic Designer</span></li>
-                        <li><span>Adobe Photoshop</span></li>
-                        <li><span>Adobe Illustrator</span></li>
-                        <li><span>Problem Solving</span></li> -->
                     </ul>
                     <br />
 
                     <div class="languages">
                         <p class="head">Languages</p>
-                        <!-- <p class="p3">Hindi</p>
-                        <p class="p3">English</p>
-                        <p class="p3">Gujarati</p>
-                        <p class="p3">German</p> -->
                     </div>
                     <br />
 
-
                     <p class="head">Interest</p>
                     <ul class="interest">
-                        <!-- <li><span>A</span></li>
-                        <li><span>B</span></li>
-                        <li><span>C</span></li>
-                        <li><span>D</span></li>
-                        <li><span>E</span></li> -->
                     </ul>
 
                 </div>
@@ -867,37 +810,11 @@
 
                     <p class="head">Experience</p>
                     <div class="experience">
-                        <!-- <p class="job-title">Web Devloper (2018-NOW)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p>
-
-                        <p class="job-title">Sotware Devloper (2012-2018)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p>
-
-                        <p class="job-title">Graphic Designer (2010-2012)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p> -->
                     </div>
                     <br />
 
                     <p class="head">Education</p>
                     <div class="education">
-                        <!-- <p class="degree">High School (2009-2010)</p>
-                        <p class="par-4">
-                            School Name
-                        </p>
-
-                        <p class="degree">B.TECH (2013-2015)</p>
-                        <p class="par-4">
-                            College Name
-                        </p> -->
                     </div>
                 </div>
             </div>
@@ -915,11 +832,6 @@
 
 
     <div class="t3 container-fluid template" style="background-color: aliceblue; display:none;" id="Template_3">
-        <!--<a onclick="backToForm('t3')">
-            <div class="back-to-form"><span><i class="fas fa-angle-double-left fa-3x"></i></span><span
-                    style="font-size: 23px; margin-left: 10px; margin-right: 10px;">Back to form</span>
-            </div>
-        </a>-->
         <div class="main">
             <div class="top-section">
                 <img src="../images/person.jfif" class="profilepic">
@@ -943,31 +855,17 @@
 
                     <p class=" head">My Skills</p>
                     <ul class="skills">
-                        <!-- <li><span>Web Devloper</span></li>
-                        <li><span>Graphic Designer</span></li>
-                        <li><span>Adobe Photoshop</span></li>
-                        <li><span>Adobe Illustrator</span></li>
-                        <li><span>Problem Solving</span></li> -->
                     </ul>
                     <br />
 
                     <div class="languages">
                         <p class="head">Languages</p>
-                        <!-- <p class="p3">Hindi</p>
-                        <p class="p3">English</p>
-                        <p class="p3">Gujarati</p>
-                        <p class="p3">German</p> -->
                     </div>
                     <br />
 
 
                     <p class="head">Interest</p>
                     <ul class="interest">
-                        <!-- <li><span>A</span></li>
-                        <li><span>B</span></li>
-                        <li><span>C</span></li>
-                        <li><span>D</span></li>
-                        <li><span>E</span></li> -->
                     </ul>
 
                 </div>
@@ -991,37 +889,11 @@
 
                     <p class="head">Experience</p>
                     <div class="experience">
-                        <!-- <p class="job-title">Web Devloper (2018-NOW)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p>
-
-                        <p class="job-title">Sotware Devloper (2012-2018)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p>
-
-                        <p class="job-title">Graphic Designer (2010-2012)</p>
-                        <p class="par-4">
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries.
-                        </p> -->
                     </div>
                     <br />
 
                     <p class="head">Education</p>
                     <div class="education">
-                        <!-- <p class="degree">High School (2009-2010)</p>
-                        <p class="par-4">
-                            School Name
-                        </p>
-
-                        <p class="degree">B.TECH (2013-2015)</p>
-                        <p class="par-4">
-                            College Name
-                        </p> -->
                     </div>
                 </div>
             </div>
@@ -1145,10 +1017,3 @@
 </script>
 
 </html>
-
-<!-- <div class="ms-3 mt-4">
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">Present</label>
-    </div>
-</div> -->
