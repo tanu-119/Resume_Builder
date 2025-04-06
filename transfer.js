@@ -288,9 +288,6 @@ function generateCV(template) {
     }
   }
 
-  // <li><span class="text">English</span></li>
-
-  //  **********    Languages    **********
 
   let lang_items = $("#accordionLang .accordion-item").length;
   for (let i = 0; i < lang_items; i++) {
